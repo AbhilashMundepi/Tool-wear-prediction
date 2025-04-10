@@ -83,4 +83,5 @@ with st.expander("🔍 Show Data Correlation Heatmap"):
 
 # Footer
 st.markdown("---")
-st.markdown("Built by Abhilash Mundepi <br>  Tool Wear Machine Learning Project", unsafe_allow_html=True)
+st.markdown("Built by Abhilash Mundepi <br>  Tool Wear ML Project", unsafe_allow_html=True)
+st.markdown("🔍 Predict tool wear using machining parameters like speed, feed rate, depth of cut, and time.")
