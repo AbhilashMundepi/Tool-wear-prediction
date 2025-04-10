@@ -83,4 +83,4 @@ with st.expander("🔍 Show Data Correlation Heatmap"):
 
 # Footer
 st.markdown("---")
-st.markdown("Built by Abhilash Mundepi\  | Tool Wear Machine Learning Project")
+st.markdown("Built by Abhilash Mundepi   | Tool Wear Machine Learning Project")
