@@ -7,7 +7,7 @@ from sklearn.metrics import mean_squared_error, r2_score
 import matplotlib.pyplot as plt
 import seaborn as sns
 
-# Generate synthetic data
+# Generate  data
 np.random.seed(42)
 n_samples = 200
 cutting_speed = np.random.uniform(80, 200, n_samples)
@@ -15,7 +15,7 @@ feed_rate = np.random.uniform(0.1, 0.5, n_samples)
 depth_of_cut = np.random.uniform(0.5, 3.0, n_samples)
 machining_time = np.random.uniform(1, 60, n_samples)
 
-# Tool wear formula (realistic simulation)
+# Tool wear formula 
 tool_wear = (
     0.002 * cutting_speed +
     0.5 * feed_rate +
@@ -24,7 +24,7 @@ tool_wear = (
     np.random.normal(0, 0.2, n_samples)
 )
 
-# Create DataFrame
+#  DataFrame
 df = pd.DataFrame({
     "Cutting Speed (m/min)": cutting_speed,
     "Feed Rate (mm/rev)": feed_rate,
@@ -75,7 +75,7 @@ if st.button("Predict Tool Wear"):
     ax.set_title("Prediction vs Actual Tool Wear")
     st.pyplot(fig)
 
-# Optional: show correlation heatmap
+#  show correlation heatmap
 with st.expander("🔍 Show Data Correlation Heatmap"):
     fig_corr, ax_corr = plt.subplots()
     sns.heatmap(df.corr(), annot=True, cmap="coolwarm", ax=ax_corr)
