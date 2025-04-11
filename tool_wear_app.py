@@ -66,10 +66,7 @@ if st.button("Predict Tool Wear"):
     st.success(f"Predicted Tool Wear: {prediction:.3f} mm")
 
 
-    r2 = r2_score(y_test, y_pred)
-    rmse = np.sqrt(mean_squared_error(y_test,y_pred))
-    st.success(f"R Square Score : {r2:.2f}")
-    st.success(f"Root Mean Squared Error : {rmse:.2f}mm")
+    
 
     # Visualize prediction vs true values
     y_pred = model.predict(X_test)
@@ -80,6 +77,11 @@ if st.button("Predict Tool Wear"):
     ax.set_ylabel("Predicted Tool Wear (mm)")
     ax.set_title("Prediction vs Actual Tool Wear")
     st.pyplot(fig)
+
+    r2 = r2_score(y_test, y_pred)
+    rmse = np.sqrt(mean_squared_error(y_test,y_pred))
+    st.success(f"R Square Score : {r2:.2f}")
+    st.success(f"Root Mean Squared Error : {rmse:.2f}mm")
 
  
 
