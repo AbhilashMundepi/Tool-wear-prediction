@@ -89,7 +89,7 @@ with st.expander("🔍 Show Data Correlation Heatmap"):
     sns.heatmap(df.corr(), annot=True, cmap="coolwarm", ax=ax_corr)
     st.pyplot(fig_corr)
 
-   # Footer
-   st.markdown("---")
-   st.markdown("Built by Abhilash Mundepi <br>  Tool Wear ML Project", unsafe_allow_html=True)
-   st.markdown("🔍 Predict tool wear using machining parameters like speed, feed rate, depth of cut, and time.")
+# Footer
+st.markdown("---")
+st.markdown("Built by Abhilash Mundepi <br>  Tool Wear ML Project", unsafe_allow_html=True)
+st.markdown("🔍 Predict tool wear using machining parameters like speed, feed rate, depth of cut, and time.")
