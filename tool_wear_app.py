@@ -65,6 +65,12 @@ if st.button("Predict Tool Wear"):
     prediction = model.predict(input_data)[0]
     st.success(f"Predicted Tool Wear: {prediction:.3f} mm")
 
+
+    r2 = r2_score(y_test, y_pred)
+    rmse = np.sqrt(mean_squared_error(y_test,y_pred))
+    st.success(f"R Square Score : {r2:.2f}")
+    st.success(f"Root Mean Squared Error : {rmse:.2f}mm")
+
     # Visualize prediction vs true values
     y_pred = model.predict(X_test)
     fig, ax = plt.subplots()
@@ -75,18 +81,15 @@ if st.button("Predict Tool Wear"):
     ax.set_title("Prediction vs Actual Tool Wear")
     st.pyplot(fig)
 
-    r2 = r2_score(y_test, y_pred)
-    rmse = np.sqrt(mean_squared_error(y_test,y_pred))
-    st.success(f"R Square Score : {r2:.2f}")
-    st.success(f"Root Mean Squared Error : {rmse:.2f}mm")
+ 
 
-#  show correlation heatmap
-with st.expander("🔍 Show Data Correlation Heatmap"):
+   #  show correlation heatmap
+    with st.expander("🔍 Show Data Correlation Heatmap"):
     fig_corr, ax_corr = plt.subplots()
     sns.heatmap(df.corr(), annot=True, cmap="coolwarm", ax=ax_corr)
     st.pyplot(fig_corr)
 
-# Footer
-st.markdown("---")
-st.markdown("Built by Abhilash Mundepi <br>  Tool Wear ML Project", unsafe_allow_html=True)
-st.markdown("🔍 Predict tool wear using machining parameters like speed, feed rate, depth of cut, and time.")
+   # Footer
+   st.markdown("---")
+   st.markdown("Built by Abhilash Mundepi <br>  Tool Wear ML Project", unsafe_allow_html=True)
+   st.markdown("🔍 Predict tool wear using machining parameters like speed, feed rate, depth of cut, and time.")
