@@ -84,7 +84,7 @@ if st.button("Predict Tool Wear"):
  
 
    #  show correlation heatmap
-    with st.expander("🔍 Show Data Correlation Heatmap"):
+with st.expander("🔍 Show Data Correlation Heatmap"):
     fig_corr, ax_corr = plt.subplots()
     sns.heatmap(df.corr(), annot=True, cmap="coolwarm", ax=ax_corr)
     st.pyplot(fig_corr)
